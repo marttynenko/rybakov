@@ -1,0 +1,102 @@
+<!--#include file="inc-header.html"-->
+
+<div class="profile-page">
+  <h1 class="profile-page-title">Мой профиль</h1>
+
+  <div class="row">
+    <div class="col-sm-2 col-md-3">
+
+      <ul class="profile-page-menu">
+        <li><a href="#" class="active">О себе</a></li>
+        <li><a href="#">Документы</a></li>
+        <li><a href="#">Диплом</a></li>
+      </ul>
+    </div>
+    
+    <div class="col-sm-6 col-md-9">
+      <form class="ui-form form_account" novalidate>
+      <div class="row">
+        <div class="col-account-photo">
+          <div class="account-photo">
+            <div class="account-photo-preview"></div>
+            <div class="account-photo-btn ui-btn ui-btn-block">
+              <div class="account-photo-btn-label">Загрузить фото</div>
+              <input type="file" name="account_photo" class="account-photo-input" accept=".jpg,.jpeg,.png,.webp">
+            </div>
+          </div>
+        </div><!--.col-account-photo-->
+  
+        <div class="col-account-fields">
+  
+          <div class="account-fields">
+            <div class="ui-form-group">
+              <div class="ui-field ui-field-labeled">
+                <input type="text" class="ui-input" name="name" id="name" value="Константин">
+                <label for="name" class="ui-label">Имя</label>
+              </div>
+      
+              <div class="ui-field ui-field-labeled">
+                <input type="text" class="ui-input" name="lastname" id="lastname" value="Константинопольский">
+                <label for="lastname" class="ui-label">Фамилия</label>
+              </div>
+      
+              <div class="ui-field ui-field-labeled">
+                <input type="tel" class="ui-input ui-phone-mask" name="phone" id="phone" value="+7 (918) 192-11-00">
+                <label for="phone" class="ui-label">Телефон</label>
+              </div>
+      
+              <div class="ui-field ui-field-labeled">
+                <input type="email" class="ui-input" name="mail" id="mail">
+                <label for="mail" class="ui-label">Почта</label>
+              </div>
+            </div><!--.group-->
+  
+            <div class="ui-form-group">
+              <div class="ui-field ui-field-labeled">
+                <input type="text" class="ui-input ui-date-mask" id="date" name="date">
+                <label for="date" class="ui-label">Дата рождения</label>
+              </div>
+  
+              <div class="ui-field ui-field-labeled">
+                <input type="text" class="ui-input" id="city" name="city">
+                <label for="city" class="ui-label">Город</label>
+              </div>
+  
+              <div class="ui-field ui-field-labeled">
+                <select name="sex" id="sex" class="ui-styler ui-input">
+                  <option value="1">Мужской</option>
+                  <option value="2">Женский</option>
+                </select>
+                <label for="sex" class="ui-label">Пол</label>
+              </div>  
+            </div>
+
+            <div class="ui-form-group">
+              <div class="ui-field ui-field-labeled">
+                <input type="password" class="ui-input" name="oldpassword" id="oldpassword">
+                <label for="oldpassword" class="ui-label">Старый пароль</label>
+              </div>
+  
+              <div class="ui-field ui-field-labeled">
+                <input type="password" class="ui-input" name="password" id="password">
+                <label for="password" class="ui-label">Новый пароль</label>
+              </div>
+  
+              <div class="ui-field ui-field-labeled">
+                <input type="password" class="ui-input" name="passwordretry" id="passwordretry">
+                <label for="passwordretry" class="ui-label">Повторите новый пароль</label>
+              </div>
+            </div>
+  
+            <button class="ui-btn ui-btn-block ui-btn-big" type="submit">Сохранить</button>
+            <div class="account-save-status">Данные сохранены</div>
+          </div><!--.account-fields-->
+          
+        </div><!--.col-account-fields-->
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->

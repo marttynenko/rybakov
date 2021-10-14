@@ -1,0 +1,173 @@
+<!--#include file="inc-header.html"-->
+
+<div class="profile-page">
+  <h1 class="profile-page-title">Мой профиль</h1>
+
+  <div class="row">
+    <div class="col-sm-2 col-md-3">
+
+      <ul class="profile-page-menu">
+        <li><a href="#">О себе</a></li>
+        <li><a href="#" class="active">Документы</a></li>
+        <li><a href="#">Диплом</a></li>
+      </ul>
+    </div>
+    
+    <div class="col-sm-6 col-md-9">
+      <div class="container-370 profile-docs">
+        <div class="profile-msgs">
+          <div class="h1 profile-msgs-title">Документы для получения диплома</div>
+          <div class="profile-msgs-txt">
+            <p>Чтобы получить удостоверение о повышении квалификации по правилам приёма нужно внести данные документа об образовании, паспорти СНИЛС.</p>
+            <p>Ваши персональные данные надёжно защищены и безопасно хранятся.</p>
+          </div>
+        </div>
+
+        <form id="form_documents" class="ui-form">
+          <div class="ui-form-group">
+            <div class="ui-form-group-head">
+              <h5 class="ui-form-group-title">Паспорт</h5>
+              Загрузите скан двух первых страниц паспорта гражданина РФ
+            </div>
+            
+            <div class="ui-field">
+              <label for="#passport_file" class="ui-btn ui-btn-bordered ui-btn-block ui-btn-file">
+                <input type="file" name="#passport_file" id="#passport_file" accept=".jpg,.jpeg,.png,.webp">
+                <span class="ui-btn-file-txt">Загрузить скан</span>
+              </label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input" name="passport_series" id="passport_series" value="">
+              <label for="passport_series" class="ui-label">Серия и номер паспорта</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input" name="lastname" id="lastname">
+              <label for="lastname" class="ui-label">Фамилия</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input" name="name" id="name">
+              <label for="name" class="ui-label">Имя</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input" name="secondname" id="secondname">
+              <label for="secondname" class="ui-label">Отчество</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date-mask" id="birthdate" name="birthdate">
+              <label for="birthdate" class="ui-label">Дата рождения</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="citizenship" name="citizenship">
+              <label for="citizenship" class="ui-label">Гражданство</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <select name="sex" id="sex" class="ui-styler ui-input">
+                <option value="1">Мужской</option>
+                <option value="2">Женский</option>
+              </select>
+              <label for="sex" class="ui-label">Пол</label>
+            </div> 
+          </div><!--.group-->
+
+          <div class="ui-form-group">
+            <h5 class="ui-form-group-title">Документ об образовании</h5>
+
+            <div class="ui-field">
+              <label for="#diplom_file" class="ui-btn ui-btn-bordered ui-btn-block ui-btn-file">
+                <input type="file" name="#diplom_file" id="#diplom_file" accept=".jpg,.jpeg,.png,.webp">
+                <span class="ui-btn-file-txt">Загрузить скан</span>
+              </label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <select name="education_level" id="education_level" class="ui-styler ui-input">
+                <option value="1">Магистратура</option>
+                <option value="2">Бакалавр</option>
+                <option value="3">Аспирантура</option>
+                <option value="4">Среднее</option>
+                <option value="5">Среднее-специальное</option>
+              </select>
+              <label for="education_level" class="ui-label">Уровень образования</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="education_number" name="education_number">
+              <label for="education_number" class="ui-label">Номер документа</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="education_reg" name="education_reg">
+              <label for="education_reg" class="ui-label">Регистрационный номер</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date-mask" id="education_date" name="education_date">
+              <label for="education_date" class="ui-label">Дата выдачи</label>
+            </div>
+          </div><!--.group-->
+
+          <div class="ui-form-group">
+            <h5 class="ui-form-group-title">СНИЛС</h5>
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="snils" name="snils">
+              <label for="snils" class="ui-label">Номер СНИЛС</label>
+            </div>
+          </div><!--.group-->
+
+          <div class="ui-form-group">
+            <div class="ui-form-group-head">
+              <h5 class="ui-form-group-title">Адрес</h5>
+              По этому адресу мы доставим ваше удостоверение о повышении квалификации
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="city" name="city">
+              <label for="city" class="ui-label">Город</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="adres" name="adres">
+              <label for="adres" class="ui-label">Адрес</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="postcode" name="postcode">
+              <label for="postcode" class="ui-label">Индекс</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="podezd" name="podezd">
+              <label for="podezd" class="ui-label">Подъезд</label>
+            </div>
+
+            <div class="ui-field ui-field-labeled">
+              <input type="text" class="ui-input ui-date" id="apartment" name="apartment">
+              <label for="apartment" class="ui-label">Квартира</label>
+            </div>
+          </div><!--.group-->
+
+          <div class="ui-centered">
+            <div class="ui-form-hint">Нажимая кнопку «Сохранить» я подтверждаю своё согласие на обработку персональных данных.</div>
+
+            <div class="ui-field">
+              <button class="ui-btn ui-btn-block">Сохранить</button>
+            </div>
+
+            <div class="ui-form-status">Данные сохранены</div>
+          </div>
+
+        </form>
+      </div><!--.370-->
+      
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->

@@ -1,0 +1,149 @@
+<!--#include file="inc-header.html"-->
+
+<div class="page">
+  
+  <div class="demo">
+    <h1 class="page-title">UI. Образцы оформления элементов и немного о предусмотренных классах</h1>
+    <h4>Заголовки, абзацы, ссылки</h4>
+
+    <h1>Заголовок 1</h1>
+    <h2>Заголовок 2</h2>
+    <h3>Заголовок 3</h3>
+    <h4>Заголовок 4</h4>
+    
+    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты и <a href="#">ссылки</a>. Приставка жаренные запятой грустный маленький решила дорогу снова, подзаголовок страна, коварных свой!</p>
+    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Приставка жаренные запятой грустный маленький решила дорогу снова!</p>
+    <p>Шрифт второстепенного текста, класс <span class="ui-mark">ui-font-secondary</span></p>
+    <p class="ui-font-secondary">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Приставка жаренные запятой грустный маленький решила дорогу снова!</p>
+    <p>Светлый (серый) текст <span class="ui-mark">.ui-color-light</span></p>
+    <p class="ui-color-light">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Приставка жаренные запятой грустный маленький решила дорогу снова!</p>
+    <div class="ui-hr"></div>
+
+    <h4>Выравнивание текста</h4>
+
+    <p>Выравнивание по левому краю <span class="ui-mark">.ui-lefted</span></p>
+    <div class="ui-mark-block ui-lefted">
+      Какой-то текст
+    </div>
+    <p>Выравнивание по правому краю <span class="ui-mark">.ui-righted</span></p>
+
+    <div class="ui-mark-block ui-righted">
+      Какой-то текст
+    </div>
+
+    <p>Выравнивание по центру <span class="ui-mark">.ui-centered</span></p>
+
+    <div class="ui-mark-block ui-centered">
+      Какой-то текст
+    </div>
+    <div class="ui-hr"></div>
+
+    <h4>Статусы аккаунта</h4>
+    <p>
+      <div class="profile-status">Пробный период</div>
+      <div class="profile-status profile-standart">Стандартный</div>
+    </p>
+    <p>
+      <div class="profile-status profile-optimal">Оптимальный</div>
+      <div class="profile-status profile-all">Все включено</div>
+    </p>
+
+    <div class="ui-hr"></div>
+
+    <h4>Кнопки</h4>
+    <p><a href="#" class="ui-btn">Кнопка</a> <a href="#" class="ui-btn ui-btn-bordered">Серая кнопка</a> <a href="#" class="ui-btn ui-btn-big">Большая кнопка</a></p>
+    <p><a href="#" class="ui-btn ui-btn-block">Блочная кнопка</a></p>
+    <p>Классы комбинируются, например:</p>
+    <p><a href="#" class="ui-btn ui-btn-big ui-btn-bordered ui-btn-block">Я серая, большая и блочная</a></p>
+    
+    <div class="ui-hr"></div>
+
+    <h4>Таблицы</h4>
+    <table class="ui-table">
+      <tbody>
+        <tr>
+          <td>Колонка 1</td>
+          <td>Колонка 2</td>
+          <td>Колонка 3</td>
+        </tr>
+        <tr>
+          <td>Колонка 1</td>
+          <td>Колонка 2</td>
+          <td>Колонка 3</td>
+        </tr>
+        <tr>
+          <td>Колонка 1</td>
+          <td>Колонка 2</td>
+          <td>Колонка 3</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui-hr"></div>
+
+    <h4>Элементы форм</h4>
+
+    <p>Инпут:</p>
+
+    <p><input type="text" class="ui-input" placeholder="Я простой инпут"></p>
+
+    <p>Инпут с динамическим label'ом. Инпут и лабел необходимо оборачивать классом <span class="ui-mark">.ui-field-labeled</span>.</p>
+
+    <div class="ui-field ui-field-labeled">
+      <input type="text" class="ui-input" name="name" id="name">
+      <label for="name" class="ui-label">Имя</label>
+    </div>
+
+    <p>Заблокированный инпут, атрибуты readonly, disabled</p>
+
+    <div class="ui-field ui-field-labeled filled">
+      <input type="text" class="ui-input" name="lastname" id="lastname" disabled="" value="Константинопольская">
+      <label for="lastname" class="ui-label">Фамилия</label>
+    </div>
+
+    <p>Селектлист крупный</p>
+
+    <div class="ui-field">
+      <select name="selbig" class="ui-styler ui-input">
+        <option value="1">Опция 1</option>
+        <option value="2">Опция 2</option>
+      </select>
+    </div>
+
+    <p>Селектлист дефолтный</p>
+
+    <div class="ui-field">
+      <select name="sel" class="ui-styler">
+        <option value="1">Опция 1</option>
+        <option value="2">Опция 2</option>
+      </select>
+    </div>
+
+    <br>
+
+    <p>Вертикальный отступ между полями обеспечивается оберткой <span class="ui-mark">.ui-field</span>. Также поля можно группировать, оборачивая их <span class="ui-mark">.ui-form-group</span></p>
+
+    <div class="ui-form-group">
+      <div class="ui-field ui-field-labeled">
+        <input type="text" class="ui-input" name="secondname" id="secondname">
+        <label for="secondname" class="ui-label">Отчество</label>
+      </div>
+  
+      <div class="ui-field ui-field-labeled">
+        <input type="text" class="ui-input" name="surname" id="surname">
+        <label for="surname" class="ui-label">Фамилия</label>
+      </div>
+    </div>
+
+    <div class="ui-form-group">
+      <div class="ui-field ui-field-labeled">
+        <input type="tel" class="ui-input" name="phone" id="phone">
+        <label for="phone" class="ui-label">Номер телефона</label>
+      </div>
+    </div>
+    
+    
+  </div><!--.demo-->
+</div><!--.page-->
+
+<!--#include file="inc-footer.html"-->

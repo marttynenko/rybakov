@@ -1,0 +1,22 @@
+{
+  "name": "units_kids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgeniy Martynenko <marttynenko@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-image": "^6.2.1",
+    "gulp-less": "^5.0.0",
+    "gulp-svg-sprites": "^4.1.2",
+    "less-plugin-autoprefix": "^2.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}

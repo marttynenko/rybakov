@@ -1,0 +1,10 @@
+.font-size(@size) {
+  @rem: (@size/16);
+  font-size:~"@{size}px";
+	font-size:~"@{rem}rem";
+}
+
+.letter-space(@lsp) {
+  @space: (@lsp/1000);
+	letter-spacing: ~"@{space}em";
+}

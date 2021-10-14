@@ -1,0 +1,94 @@
+<div class="mfp-popup popup-crop zoom-anim-dialog">
+  
+  <div class="mfp-popup-title">Загрузка фотографии</div>
+
+  <div class="popup-crop-content">
+    <div class="popup-crop-hint">Выберите область фотографии, которая будет отображаться в профиле.</div>
+    <div class="popup-crop-block">
+      <img class="popup-crop-img" src="./images/examples/crop.jpeg" alt="alt">
+    </div>
+    <div class="popup-crop-btns">
+      <a href="javascript:void(0)" id="popup_crop_submit" class="ui-btn ui-btn-big ui-btn-block">Подтвердить</a>
+      <label for="popup_crop_input" id="popup_crop_label" class="ui-btn ui-btn-block ui-btn-big ui-btn-bordered">Загрузить другое фото <input type="file" name="popup_crop_input" id="popup_crop_input" accept=".png,.jpg,.jpeg,.webp"></label>
+    </div>
+  </div>
+  <script>
+  jQuery(document).ready(function($){
+    const imgToCrop = document.querySelector('img.popup-crop-img');
+    const submitBtn = document.querySelector('#popup_crop_submit');
+    const input = document.querySelector('#popup_crop_input');
+    let croppable = false;
+    
+    //инит cropper
+    let cropper = initCropper(imgToCrop);
+
+
+    function initCropper(img) {
+      let crp = new Cropper(img, {
+        aspectRatio: 1,
+        viewMode: 1,
+        guides: false,
+        center: false,
+        ready: function () {
+          croppable = true;
+        }
+      })
+      return crp
+    }
+
+    //create and send to server cropped image
+    function sendCroppedImg() {
+      if (!croppable) return;
+
+      cropper.getCroppedCanvas().toBlob((blob) => {
+        const formData = new FormData();
+
+        // Pass the image file name as the third parameter if necessary.
+        formData.append('croppedImage', blob/*, 'example.png' */);
+
+        // Use `jQuery.ajax` method for example
+        // $.ajax('/path/to/upload', {
+        //   method: 'POST',
+        //   data: formData,
+        //   processData: false,
+        //   contentType: false,
+        //   success() {
+        //     console.log('Upload success');
+        //   },
+        //   error() {
+        //     console.log('Upload error');
+        //   },
+        // });
+      });
+    }
+
+    function changePhoto (input) {
+      if (input.files && input.files[0]){
+        let reader = new FileReader();
+        reader.onload = function(e) {
+          updatePhoto(e.target.result)
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    //обновляем превью фото
+    function updatePhoto (src) {
+      if (!croppable) return;
+
+      //дестроим текущий инстанс cropper
+      cropper.destroy()
+      //заменяем фото
+      imgToCrop.src = src
+      //реинитим cropper
+      initCropper(imgToCrop)
+    }
+
+    submitBtn.addEventListener('click',sendCroppedImg)
+
+    input.addEventListener('change',function(e) {
+      changePhoto(e.target)
+    })
+  });
+  </script>
+</div>
